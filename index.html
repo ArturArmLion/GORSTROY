@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORSTROY</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="head-1">
+                <ul class="menu-top">
+                    <li class="menu-item"><img src="image/Без имени-1 1.png" alt="" width="150" height=""></li>
+                    <li class="menu-item"><p class="text">+7 (999)-999-99 99 <br>Позвоните нам</p></li>
+                    <li class="menu-item"><button class="button bt-1" type="button">Оставить заявку</button></li>
+                </ul>
+            </div>
+
+    
+    <img src="image/image 1.png" alt="" width="100%" class="fon">
+
+
+            <div class="head-2">
+                <ul class="menu-bot">
+                    <li class="menu-bot-item"><a href="#" class="menu-bot-link">Главная</a></li>
+                    <li class="menu-bot-item"><a href="kompany.html" class="menu-bot-link">О нас</a></li>
+                    <li class="menu-bot-item"><a href="texnika.html" class="menu-bot-link">Наша техника</a></li>
+                    <li class="menu-bot-item"><a href="otzivi.html" class="menu-bot-link">Отзывы</a></li>
+                    <li class="menu-bot-item"><a href="avtorizaciya/login.php" class="menu-bot-link">Войти</a></li>
+                </ul>
+            </div>
+
+        <div class="text-2">"Найди свое решение с СпецТехПрокат: <br> аренда спецтехники для любых задач!"</div>
+            
+        </div>
+    </header>
+
+            <!-- MAIN  -->
+
+    <section class="main">
+
+        <p class="zag-1">Почему выбирают нас?</p>
+
+        <div class="container-main">
+
+             <div class="plus-1">
+                <img src="image/🦆 icon _clock_.png" alt="" width="80px">
+                <p class="element">Скорость доставки</p>
+                <p class="element-2">Наша компания славится, <br>
+                    скоростью своей подачи</p>
+             </div>
+
+             <div class="plus-2">
+                <img src="image/🦆 icon _wrench_.png" alt="" width="80px">
+                <p class="element">Качество продукции</p>
+                <p class="element-2">Мы предоставляем технику <br>
+                    исключительно премиум сегмента <br>
+                    лучше, чем у конкурентов</p>
+             </div>
+
+             <div class="plus-3">
+                <img src="image/🦆 emoji _handshake_.png" alt="" width="118px">
+                <p class="element">Выгодный договор</p>
+                <p class="element-2">Мы не просим боснасловных денег <br>
+                    за предоставляемые услуги <br>
+                    Цена у нас ниже чем у конкурентов</p>
+             </div>
+        </div>
+
+        <p class="zag-3">Автопарк техники</p>
+
+        <div class="container-two">
+            
+            <div class="case-1">
+                <img src="image/Group 16.png" alt="" width="250px">
+                    <button class="bt-2" type="button">Заказать</button>
+                <img src="image/Group 21.png" alt="" width="250px">
+                    <button class="bt-3" type="button">Заказать</button>
+                <img src="image/Group 17.png" alt="" width="250px">
+                    <button class="bt-4" type="button">Заказать</button>
+            </div>
+
+            <div class="case-2">
+                <img src="image/Group 18.png" alt="" width="250px">
+                    <button class="bt-5" type="button">Заказать</button>
+                <img src="image/Group 19.png" alt="" width="250px">
+                    <button class="bt-6" type="button">Заказать</button>
+                <img src="image/Group 20.png" alt="" width="250px">
+                    <button class="bt-7" type="button">Заказать</button>
+            </div>
+
+        </div>
+
+        <div class="container-three">
+
+            <p class="zag-4">Наши партнеры</p>
+            <img class="partner" src="image/image 8.png" alt="" width="900px">
+
+        </div>
+
+        <div class="forma-obrat-svyaz">
+            <p class="zag">Оставьте заявку и менеджер <br>
+                перезвонит вам через 5 минут</p>
+            
+            <p class="inf">И предложит специальные условия для клиентов, <br> 
+                которые обращаются к нам в первый раз</p>
+
+            <form class="forma" action="submit.php" method="POST">
+                <input class="inf-2" name="name" type="text" placeholder="Ваше имя" id="name" required>
+                <input id="phone" class="inf-2" name="phone" type="tel" placeholder="Ваш телефон" required>
+                <button class="knopka">Отправить</button>
+            </form>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const nameInput = document.getElementById("name");
+        
+                if (nameInput) {
+                    nameInput.addEventListener("input", function(event) {
+                        let value = event.target.value;
+        
+                        // Удаляем цифры и спецсимволы, кроме дефиса и пробела
+                        value = value.replace(/[^a-zA-Zа-яА-ЯёЁ\s-]/g, "");
+        
+                        // Убираем пробелы в начале
+                        value = value.replace(/^\s+/, "");
+        
+                        // Делаем первую букву заглавной
+                        if (value.length > 0) {
+                            value = value.charAt(0).toUpperCase() + value.slice(1);
+                        }
+        
+                        event.target.value = value;
+                    });
+                } else {
+                    console.error("Ошибка: Поле name не найдено!");
+                }
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const phoneInput = document.getElementById("phone");
+        
+                if (!phoneInput) {
+                    console.error("Ошибка: Элемент #phone не найден!");
+                    return;
+                }
+        
+                phoneInput.addEventListener("input", function(event) {
+                    let value = event.target.value.replace(/\D/g, ""); // Удаляем все нецифровые символы
+        
+                    // Если пользователь начал ввод без "+7", добавляем
+                    if (!value.startsWith("7")) {
+                        value = "7" + value;
+                    }
+        
+                    // Ограничиваем количество цифр
+                    value = value.substring(0, 11);
+        
+                    // Форматируем в "+7 (XXX) XXX-XX-XX"
+                    let formattedValue = "+7";
+                    if (value.length > 1) formattedValue += " (" + value.substring(1, 4);
+                    if (value.length > 4) formattedValue += ") " + value.substring(4, 7);
+                    if (value.length > 7) formattedValue += "-" + value.substring(7, 9);
+                    if (value.length > 9) formattedValue += "-" + value.substring(9, 11);
+        
+                    event.target.value = formattedValue;
+                });
+        
+                phoneInput.addEventListener("keydown", function(event) {
+                    // Разрешаем только цифры, клавиши управления и Backspace
+                    if (!/[0-9]/.test(event.key) && 
+                        !["Backspace", "Delete", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const scrollButton = document.querySelector(".bt-1"); // Кнопка "Оставить заявку"
+                const targetBlock = document.querySelector(".container-four"); // Блок с формой
+        
+                if (scrollButton && targetBlock) {
+                    scrollButton.addEventListener("click", function(event) {
+                        event.preventDefault(); // Предотвращаем стандартное поведение кнопки
+        
+                        targetBlock.scrollIntoView({ behavior: "smooth", block: "start" }); // Плавный скролл
+                    });
+                } else {
+                    console.error("Ошибка: Кнопка или целевой блок не найдены!");
+                }
+            });
+        </script>
+        
+
+        <div class="container-five">
+            <p class="zag-6">Отзывы</p>
+
+            <img class="reviews" src="image/Group 11.png" alt="" width="600px">
+            <img class="reviews" src="image/Group 22.png" alt="" width="600px">
+            <img class="reviews" src="image/Group 23.png" alt="" width="600px">
+
+        </div>
+
+    </section>
+
+            <!-- FOOTER  -->
+
+    <footer class="footer">
+        <img class="picture-foot" src="image/Group 24.png" alt="" width="1000px" height="500px">
+
+        <div class="case-foot">
+            <div class="container-footer">
+                <div class="logo">
+                    <img src="image/Group 26.png" alt="">
+                </div>
+
+                <div class="katalog">
+                    <ul class="foot-menu">
+                        <li class="foot-item"><a href="#" class="foot-link">Каталог</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Кран</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Камаз</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Бульдозер</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Трактор</a></li>
+                    </ul>
+                </div>
+
+                <div class="social">
+                    <ul class="foot-menu">
+                        <li class="foot-item"><a href="#" class="foot-link">Соц сети</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Инстаграм</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">ВК</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Твитер</a></li>
+                        <li class="foot-item"><a href="#" class="foot-link">Вацап</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+
+        <p class="inf-3">Вся информация, содержащаяся на данном сайте не является публичной офертой, <br>
+            предусмотренной ст. 437 Гражданского Кодекса РФ. <br>
+           © 2015 - 2024 г. «СпецТехПрокат » </p>
+
+    </footer>
+
+
+
+</body>
+</html>
+
+
+
+<section class="partners-section">
+    <h2>Сотрудничество с лидерами отрасли</h2>
+    <p>Мы работаем с мировыми производителями и отраслевыми объединениями:</p>
+    <div class="partners-logos">
+      <a href="https://www.cat.com/" target="_blank" rel="nofollow">
+        <img src="img/cat-logo.png" alt="Caterpillar" width="120">
+      </a>
+      <a href="https://www.jcb.com/" target="_blank" rel="nofollow">
+        <img src="img/jcb-logo.png" alt="JCB" width="120">
+      </a>
+    </div>
+  </section>

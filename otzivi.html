@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORSTROY</title>
+    <link rel="stylesheet" href="css/otzivi.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="head-1">
+                <ul class="menu-top">
+                    <li class="menu-item"><img src="image/Без имени-1 1.png" alt="" width="150" height=""></li>
+                    <li class="menu-item"><p class="text">+7 (999)-999-99 99 <br>Позвоните нам</p></li>
+                    <li class="menu-item"><button class="button bt-1" type="button">Оставить заявку</button></li>
+
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 style="color: #FF7A00;">Запись на аренду</h2>
+                            <form action="submit2.php" method="post">
+                                <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+                                <input id="phone" type="tel" name="phone" placeholder="Ваш телефон" required>
+                                <button type="submit" class="buton">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const modal = document.getElementById("modal");
+                            const openModalButtons = document.querySelectorAll(".bt-1");
+                            const closeModal = document.querySelector(".close");
+                
+                            openModalButtons.forEach(button => {
+                                button.addEventListener("click", function() {
+                                    modal.style.display = "flex";
+                                    sessionStorage.setItem("modalOpened", "true");
+                                });
+                            });
+                
+                            closeModal.addEventListener("click", function() {
+                                modal.style.display = "none";
+                                sessionStorage.removeItem("modalOpened");
+                            });
+                
+                            window.addEventListener("click", function(event) {
+                                if (event.target === modal) {
+                                    modal.style.display = "none";
+                                    sessionStorage.removeItem("modalOpened");
+                                }
+                            });
+                        });
+                    </script>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const phoneInput = document.getElementById("phone");
+
+                            if (!phoneInput) {
+                                console.error("Ошибка: Элемент #phone не найден!");
+                                return;
+                            }
+
+                            phoneInput.addEventListener("input", function(event) {
+                                let value = event.target.value.replace(/\D/g, ""); // Удаляем все нецифровые символы
+
+                                // Если пользователь начал ввод без "+7", добавляем
+                                if (!value.startsWith("7")) {
+                                    value = "7" + value;
+                                }
+
+                                // Ограничиваем количество цифр
+                                value = value.substring(0, 11);
+
+                                // Форматируем в "+7 (XXX) XXX-XX-XX"
+                                let formattedValue = "+7";
+                                if (value.length > 1) formattedValue += " (" + value.substring(1, 4);
+                                if (value.length > 4) formattedValue += ") " + value.substring(4, 7);
+                                if (value.length > 7) formattedValue += "-" + value.substring(7, 9);
+                                if (value.length > 9) formattedValue += "-" + value.substring(9, 11);
+
+                                event.target.value = formattedValue;
+                            });
+
+                            phoneInput.addEventListener("keydown", function(event) {
+                                // Разрешаем только цифры, клавиши управления и Backspace
+                                if (!/[0-9]/.test(event.key) && 
+                                    !["Backspace", "Delete", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+                                    event.preventDefault();
+                                }
+                            });
+                        });
+                    </script>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const nameInput = document.getElementById("name");
+
+                            if (nameInput) {
+                                nameInput.addEventListener("input", function(event) {
+                                    let value = event.target.value;
+
+                                    // Удаляем цифры и спецсимволы, кроме дефиса и пробела
+                                    value = value.replace(/[^a-zA-Zа-яА-ЯёЁ\s-]/g, "");
+
+                                    // Убираем пробелы в начале
+                                    value = value.replace(/^\s+/, "");
+
+                                    // Делаем первую букву заглавной
+                                    if (value.length > 0) {
+                                        value = value.charAt(0).toUpperCase() + value.slice(1);
+                                    }
+
+                                    event.target.value = value;
+                                });
+                            } else {
+                                console.error("Ошибка: Поле name не найдено!");
+                            }
+                        });
+                    </script>
+
+                </ul>
+            </div>
+
+    
+            <div class="head-2">
+                <ul class="menu-bot">
+                    <li class="menu-bot-item"><a href="index.html" class="menu-bot-link">Главная</a></li>
+                    <li class="menu-bot-item"><a href="kompany.html" class="menu-bot-link">О нас</a></li>
+                    <li class="menu-bot-item"><a href="texnika.html" class="menu-bot-link">Наша техника</a></li>
+                    <li class="menu-bot-item"><a href="#" class="menu-bot-link">Отзывы</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+                <!-- MAIN  -->
+
+    <section class="main">
+        <p class="zag-1">Отзывы</p>
+
+        <img class="reviews" src="image/Group 11.png" alt="" width="600px">
+        <img class="reviews" src="image/Group 22.png" alt="" width="600px">
+        <img class="reviews" src="image/Group 23.png" alt="" width="600px">
+        <img class="reviews" src="image/Group 11.png" alt="" width="600px">
+        <img class="reviews" src="image/Group 22.png" alt="" width="600px">
+        <img class="reviews" src="image/Group 23.png" alt="" width="600px">
+    </section>
+
+
+           <!-- FOOTER  -->
+
+           <footer class="footer">
+            <img class="picture-foot" src="image/Group 24.png" alt="" width="1000px" height="500px">
+    
+            <div class="case-foot">
+                <div class="container-footer">
+                    <div class="logo">
+                        <img src="image/Group 26.png" alt="">
+                    </div>
+    
+                    <div class="katalog">
+                        <ul class="foot-menu">
+                            <li class="foot-item"><a href="#" class="foot-link">Каталог</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Кран</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Камаз</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Бульдозер</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Трактор</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="social">
+                        <ul class="foot-menu">
+                            <li class="foot-item"><a href="#" class="foot-link">Соц сети</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Инстаграм</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">ВК</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Твитер</a></li>
+                            <li class="foot-item"><a href="#" class="foot-link">Вацап</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+    
+            <p class="inf-3">Вся информация, содержащаяся на данном сайте не является публичной офертой, <br>
+                предусмотренной ст. 437 Гражданского Кодекса РФ. <br>
+               © 2015 - 2024 г. «СпецТехПрокат » </p>
+    
+        </footer>
+    
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,80 @@
+/* Основные стили для страницы регистрации */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #FF7A00;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #FF7A00;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF7A00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #e67e00;
+}
+
+/* Кнопки на странице */
+button[type="submit"] {
+    background-color: #FF7A00;
+}
+
+button[type="submit"]:hover {
+    background-color: #e67e00;
+}
+
+button[type="button"] {
+    background-color: #3498db;
+}
+
+button[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+/* Положение капчи */
+.g-recaptcha {
+    margin-bottom: 20px;
+}
