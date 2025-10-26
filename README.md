@@ -13,10 +13,10 @@
 
 <p align="center">
   <!-- Красивые бейджи для статусов -->
-  <img src="https://img.shields.io/badge/Дизайн-Готов-brightgreen" alt="Статус: Готов">
-  <img src="https://img.shields.io/badge/Дизайн-Готов-brightgreen" alt="Верстка: Готов">
+  <img src="https://img.shields.io/badge/Статус-Готов-brightgreen" alt="Статус: Готов">
+  <img src="https://img.shields.io/badge/Верстка-Готов-brightgreen" alt="Верстка: Готов">
   <img src="https://img.shields.io/badge/Дизайн-Готов-brightgreen" alt="Дизайн: Готов">
-  <img src="https://img.shields.io/badge/Дизайн-Готов-brightgreen" alt="Backend: Готов">
+  <img src="https://img.shields.io/badge/Backend-Готов-brightgreen" alt="Backend: Готов">
 </p>
 
 ---
